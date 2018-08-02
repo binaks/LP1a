@@ -27,5 +27,10 @@ int main () {
 }
 
 unsigned long long toPow( int base, int exp ) {
-	
+// Base da exponenciacao
+	if (exp == 0) return 1;
+// Caso o expoente seja postivo, recursao normal
+	if (base > 0) return (base * toPow (base, --exp));
+// Caso o expoente seja negativo, calculamos o inverso multiplicativo da potencia com o exp positivo
+	return (1 / (toPow (base, (0 - exp))));
 }

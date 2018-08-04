@@ -20,7 +20,7 @@ int main () {
 		return;
 	}
 // Calcular e mostrar 2 elevado a [0;n]
-	for (auto i (0); i <= 64; ++i)
+	for (auto i (0); i < 64; ++i)
 		std::cout << "2 elevado a " << i << "eh igual a " <<  toPow(2,n) << std::endl;
 
 	return 0;
@@ -29,8 +29,6 @@ int main () {
 unsigned long long toPow( int base, int exp ) {
 // Base da exponenciacao
 	if (exp == 0) return 1;
-// Caso o expoente seja postivo, recursao normal
-	if (base > 0) return (base * toPow (base, --exp));
-// Caso o expoente seja negativo, calculamos o inverso multiplicativo da potencia com o exp positivo
-	return (1 / (toPow (base, (0 - exp))));
+// Recursao
+	return (base * toPow (base, --exp));
 }

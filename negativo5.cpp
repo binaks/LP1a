@@ -12,7 +12,7 @@ int main () {
 	}
 
 // Imprimir quantos sao negativos
-	std::cout << count;
+	std::cout << count << std::endl;
 
 	return 0;
 }

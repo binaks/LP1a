@@ -21,7 +21,6 @@ int main () {
 
     printB(b);
 
-// Trocar o ultimo elemento de B com o 1o, o penultimo pelo 2o, ...
     for (auto i(0); i < 20; i++) {
         if ((i%2) == 1) {
             tmp = b[i];

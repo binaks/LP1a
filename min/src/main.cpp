@@ -6,14 +6,15 @@ using namespace std;
 
 int main () {
     int A[] = {1,2,-3,-4,5,-6};
+    int *result;
     
     // Deveria imprimir -6
-    auto result = min( begin(A), end(A) );
-    std::cout << *result << std::endl;
+    result = min( begin(A), end(A) );
+    std::cout << ">>> " << *result << std::endl;
     
     // Deveria imprimir -4
-    auto result = min( begin(A) + 1, begin(A) + 5 );
-    std::cout << *result << std::endl;
+    result = min( begin(A) + 1, begin(A) + 5 );
+    std::cout << ">>> " << *result << std::endl;
 
     return 0;
 }

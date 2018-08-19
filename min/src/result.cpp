@@ -1,14 +1,14 @@
 #include "../include/result.h"
 #include <iostream>
 
-int * min( int *first, int *last) {
-    int *min = first;
+const int * min( const int *first, const int *last) {
+    const int *p_min(first);
 
-    for (auto i(0); i < (last - first); ++i) {
-        if (*(first + i) < *min) {
-            min = (first + i);
+    for (auto i(1); i < (last - first); ++i) {
+        if (*(first + i) < *p_min) {
+            p_min = first + i;
         }
     }
     
-    return min;
+    return p_min;
 }

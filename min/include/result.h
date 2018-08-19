@@ -1,6 +1,6 @@
 #ifndef RESULT_H
 #define RESULT_H
 
-int * min( int *, int *);
+const int * min( const int *, const int *);
 
 #endif
